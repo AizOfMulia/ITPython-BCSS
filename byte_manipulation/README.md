@@ -10,3 +10,7 @@ Below is the Hashes associated with the files in this directory.
 The file extension `.dd` contains the "Data Dump" of the associated file with similar name.
 
 The point of the additional data dump file is to simplify the investigation of the file data, without the need for a hexeditor.
+
+## Solution
+
+From the datadump file, we can conclude that there are 3 bytes added to the start of the signature. Simply removing the 3 bytes will allow us to access or view the file. This can be done by open(), mmap(), resize(), remove() and turnacate() the file.

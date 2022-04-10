@@ -6,11 +6,11 @@ Hashing is an important aspect of cryptography, it ensures the integrity of data
 1. Plaintext/string hashing
 2. File hashing
 
-### Plaintext/string hashing
+## Plaintext/string hashing
 
 A simple conversion of a normal string of text into a hashed value.
 
 
-### File hashing
+## File hashing
 
 Converts the binary byte value of a file into a hashed value.

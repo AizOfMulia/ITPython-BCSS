@@ -6,7 +6,8 @@ The repository contains exercises and activities for participants, it can also b
 
 The activities included in the repository are listed as below;
 
-1. [Hashing](sha256_hashing)
-2. Binary Byte Manipulation
-3. Simple Proxy
+1. [SHA256 Hashing](sha256_hashing)
+2. [Binary Byte Manipulation](byte_manipulation)
+3. [Simple Python Proxy](simple_proxy)
 
+Each exercise has been organized to familiarize the participants with concepts in the python language.

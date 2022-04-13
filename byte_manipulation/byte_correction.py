@@ -14,16 +14,12 @@ def main():
         # Map the binary file information into memory map
         file_vcopy  =   mmap.mmap(bin.fileno(), 0)
 
-        # Loop over the first few bytes to identify whether the file is tampered
-        # or not
-        for SIGN in SIGN_LIST:
+        # Check if the first three bytes matches any signature in the signature list
+        if file_vcopy.read (ADDITIONAL_BYTE) in SIGN_LIST:
+            print ("The signature has been corrected")
 
-            # If the signature matches the first 3 bytes, then the files has been fixed
-            if SIGN == file_vcopy.read(ADDITIONAL_BYTE):
-                print ("File is not manipulated")
-
-                # early exit to avoid byte removal execution
-                return
+            # Early exit to avoid byte removal execution
+            return
 
         # Get the original file size in bytes
         origin_size =   file_vcopy.size()

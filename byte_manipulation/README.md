@@ -32,7 +32,7 @@ Once we've identified the number of bytes needed to be removed we can construct 
 
 Using `open()` and the memory map module `mmap` we can open the file in binary mode and map the bytes to memory.
 
-```
+```python
 import mmap
 
 def remove_bytes ():
@@ -48,7 +48,7 @@ def remove_bytes ():
 
 Once we've opened the file and map it to memory, we need to calculate the remaining bytes after removal.
 
-```
+```python
 import mmap
 
 ADDITIONAL_BYTES    =   3
@@ -70,7 +70,7 @@ def remove_bytes ():
 
 We've calculated the size of the remaining bytes, now we need to remove and append the changes.
 
-```
+```python
 import map
 
 ADDITIONAL_BYTES    =   3
@@ -100,7 +100,7 @@ def remove_bytes ():
 
 Now to run the script, we need to use the python `__name__` conditional check to tell it which function to run
 
-```
+```python
 import map
 
 ADDITIONAL_BYTES    =   3
@@ -130,7 +130,7 @@ if __name__ == '__main__':
 However, there is a problem here when rerunning the script after the file has been corrected. It will remove **three** bytes everytime its executed. Therefore, we need to have a signature list to avoid that.
 
 
-```
+```python
 import map
 
 ADDITIONAL_BYTES    =   3

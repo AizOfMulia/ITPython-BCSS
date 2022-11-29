@@ -10,9 +10,12 @@ def main () -> None:
     # Create a socket for the proxy server
     with socket.socket (socket.AF_INET, socket.SOCK_STREAM) as server:
 
+        # Escape the "address already in use error" and allowing address to be freed and reuse.
+        server.setsockopt (socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        
         # Bind the socket to localhost and proxy port
         server.bind (('', PORT))
-
+        
         # Listen to incoming connection request
         server.listen (1)
 
